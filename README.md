@@ -1,14 +1,15 @@
-Creando las vistas
-Creamos un proyecto nuevo y elegimos Maven/ Web Application
+# Paso a paso para un crud con java
+## Creamos un proyecto nuevo y elegimos Maven/ Web Application
 ![Yo](img/1.png)
 
 
 Agregamos el nombre a nuestro proyecto
 
+![Yo](img/2.png)
 
 Elegimos el servidor Apache Tomcat
 
-
+![Yo](img/3.png)
 
 
 Abrimos el archivo index.html que está dentro de la carpeta Web Pages y ejecutamos el proyecto, te va a pedir el usuario y contraseña de tomcat
