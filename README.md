@@ -80,9 +80,9 @@
  
 
 6. Creamos dentro del archivo Conexion.java una función llamada getConnection e importamos las librerías:
- java.sql.Connection
- java.sql.DriverManager
- java.sql.SQLException
+- java.sql.Connection
+- java.sql.DriverManager
+- java.sql.SQLException
 
  ![Yo](img/17.png)
 
@@ -121,8 +121,8 @@ Dentro del try creamos un objeto conexion donde vamos a almacenar el driver de l
 ## Agregando las vistas
 
 1. Vamos al archivo alumnos.jsp 
-Agregamos el cdn de bootstrap
-agregamos una tabla con las columnas y filas necesarias para mostrar los datos de los alumnos
+- Agregamos el cdn de bootstrap
+- Agregamos una tabla con las columnas y filas necesarias para mostrar los datos de los alumnos
 
 ![Yo](img/22.png)
  
@@ -179,11 +179,11 @@ agregamos una tabla con las columnas y filas necesarias para mostrar los datos d
 ![Yo](img/32.png)
 
 3. Ahora dentro de doGet vamos a realizar las siguientes instrucciones:
-Creamos una instancia de la clase AlumnosDAO esto ejecuta la conexión a la base de datos
-Creamos una variable de tipo String accion
-Creamos una variable de tipo RequestDispatcher para indicar a que vista es la que vamos a mostrar
-Le asignamos a accion los parámetros que recibimos en el request usando el método  getParameter();
-Creamos un if donde vamos a tomar las decisiones dependiendo de los parámetros recibidos a través de la url
+- Creamos una instancia de la clase AlumnosDAO esto ejecuta la conexión a la base de datos
+- Creamos una variable de tipo String accion
+- Creamos una variable de tipo RequestDispatcher para indicar a que vista es la que vamos a mostrar
+- Le asignamos a accion los parámetros que recibimos en el request usando el método  getParameter();
+- Creamos un if donde vamos a tomar las decisiones dependiendo de los parámetros recibidos a través de la url
 
 ![Yo](img/33.png)
 
@@ -201,10 +201,10 @@ Creamos un if donde vamos a tomar las decisiones dependiendo de los parámetros 
 
 
 6. Agregamos dentro del archivo alumnos.jsp el siguiente código:
-Un objeto de tipo Alumnos y Lista (línea 48)
-Un objeto de tipo AlumnosDAO para llamar a uno de sus métodos (línea 49)
-Le asignamos al objeto resultado el retorno en este caso la lista de los alumnos que están en la base de datos  (línea 50)
-Lo recorremos con un for esa lista y vamos adicionando cada uno de los datos dentro de la tabla (líneas 56 a la 63)
+- Un objeto de tipo Alumnos y Lista (línea 48)
+- Un objeto de tipo AlumnosDAO para llamar a uno de sus métodos (línea 49)
+- Le asignamos al objeto resultado el retorno en este caso la lista de los alumnos que están en la base de datos  (línea 50)
+- Lo recorremos con un for esa lista y vamos adicionando cada uno de los datos dentro de la tabla (líneas 56 a la 63)
 
 ![Yo](img/36.png)
 
@@ -224,10 +224,10 @@ estamos enviando accion=modificar y el id = 1 estos parámetros los vamos a capt
 ![Yo](img/39.png)
 
 10. En el else anterior enviamos a el archivo modificar.jsp, ahora tenemos que mostrar en el formulario de esta página los datos de ese alumno para poder cambiar lo que queramos y luego usar la ruta AlumnosController?accion=actualizar ya que tenemos el id oculto lo usamos para hacer el update correspondiente. fíjate que hacemos acá:
-Capturamos los parámetros (líneas  33 hasta 36)
-Creamos un objeto de la clase Alumnos, la instanciamos con los datos (línea 38)
-Llamamos con el objeto de la clase AlumnosDAO el método para actualizar el alumno
-Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada 
+- Capturamos los parámetros (líneas  33 hasta 36)
+- Creamos un objeto de la clase Alumnos, la instanciamos con los datos (línea 38)
+- Llamamos con el objeto de la clase AlumnosDAO el método para actualizar el alumno
+- Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada 
  
 ![Yo](img/40.png)
  
@@ -235,9 +235,9 @@ Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada
 11. Y ahora nos corresponde hacer el de eliminar un registro para ello usamos la ruta AlumnosController?accion=eliminar&id=" + resultado.get(i).getId();
 que agregamos en el momento de crear la lista de los alumnos y está en la columna Eliminar. 
 
-Capturamos el id y como es String le hacemos un parseo (línea 44)
-Llamamos al método eliminarAlumno   (línea 45)
-Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada 
+- Capturamos el id y como es String le hacemos un parseo (línea 44)
+- Llamamos al método eliminarAlumno   (línea 45)
+- Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada 
 
 ![Yo](img/41.png)
 
@@ -248,9 +248,9 @@ Redirigimos a la página de alumnos.jsp para que muestre la tabla actualizada
 ![Yo](img/42.png)
 
 12. Una vez que estamos en esa ruta podemos llenar el formulario para que cuando pulsamos sobre agregar en el atributo action del formulario va a usar la ruta AlumnosController?accion=insert
-Capturamos los parámetros y los guardamos en variables de tipo String (líneas 51 hasta la 53)
-Creamos un objeto de la clase Alumnos y lo instanciamos con las variables, usamos 0 en el primero porque recuerda que es auto incrementable(línea 55) 
-Por último vamos a usar el objeto alumnosDao para llamar el método insertarAlumnos
+- Capturamos los parámetros y los guardamos en variables de tipo String (líneas 51 hasta la 53)
+- Creamos un objeto de la clase Alumnos y lo instanciamos con las variables, usamos 0 en el primero porque recuerda que es auto incrementable(línea 55) 
+- Por último vamos a usar el objeto alumnosDao para llamar el método insertarAlumnos
 
 ![Yo](img/43.png)
 
