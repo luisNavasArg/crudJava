@@ -212,6 +212,9 @@ Dentro del try creamos un objeto conexion donde vamos a almacenar el driver de l
 
 ![Yo](img/37.png)
 
+- Nota: En el caso de no aparecer la lista verifica que tengas el archivo pom.xml así como el de la imagen siguiente para que puedas usar la api de los archivos servlet de Maven
+
+![Yo](img/pom.png)
 
 8. Ahora podemos continuar dentro del archivo ALumnosController.java vamos a agregar la ruta para modificar los datos de un alumno, si pulsamos sobre la x que está dentro de la tabla en la columna Modificar vas a notar que nos va a dar un error ya que aún no se ha creado el dispatcher para recibir la petición (request) como el siguiente:
 
